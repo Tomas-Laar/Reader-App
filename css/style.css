@@ -1,26 +1,32 @@
 body {
-    font-size: 16px;
+    font-size: 18px;
     font-family: sans-serif;
     padding: 8px 16px 0px 8px;
 }
 
+body.some_keyword {
+
+}
+
 .columns {
+    -moz-column-gap: 150px;
+    -webkit-column-gap: 100px;
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 20px;
 }
 
 #left{
-    font-size: 20px;
+    font-size: 18px;
     text-align: left;
     margin-left: 20px;
 }
 
 #right{
-    font-size: 20px;
+    font-size: 18px;
     text-align: left;
     margin-right: 20px;
 }
@@ -62,30 +68,32 @@ img {
     height: auto;
 }
 
-@media screen and (max-width: 36em) {
-    /* These CSS instructions are only used, if the 
-     * ‘media query’ above turns out to be true 
-     * 
-     * Media query’s can use properties like:
-     * width
-     * orientation
-     * resolution
-     * screen / print
-     */
-    /* Smaller Screens */
-    /* Our heading can be smaller */
+@media screen and (max-width: 1024px) {
+    .columns {
+    -moz-column-gap: 50px;
+    -webkit-column-gap: 50px;
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .columns {
     -webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
     column-count: 1;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 20px;
-}
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 50px;
+    }
 }
 
 
-//@media screen and (max-width: 36em) {
+@media screen and (max-width: 320px) {
     /* These CSS instructions are only used, if the 
      * ‘media query’ above turns out to be true 
      * 
@@ -138,7 +146,7 @@ img {
      * to be so big
      */
     header h1 {
-        font-size: 160px;
+        font-size: 16px;
         font-style: italic;
     } 
 	
