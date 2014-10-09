@@ -1,61 +1,66 @@
 body {
-    font-size: 18px;
+    font-size: 16px;
     font-family: sans-serif;
+    line-height: 24px;
     padding: 8px 16px 0px 8px;
 }
 
-body.some_keyword {
+/* This is the subttitle text */
+h1 {font-family: 'Noto Serif', serif;
+    font-size: 14px;
+    text-align: center;
+    font-style: italic;
+    font-weight: 400;
+}
 
+/* This is the running text */
+h5 {font-family: 'Noto Serif', serif;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .columns {
-    -moz-column-gap: 150px;
+    text-align: justify;
+    text-justify: inter-word;
+    height: 500px;
+    -moz-column-gap: 100px;
     -webkit-column-gap: 100px;
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
+    margin-top: 20px;
     margin-left: 100px;
     margin-right: 100px;
     padding: 20px;
 }
 
 #left{
-    font-size: 18px;
-    text-align: left;
-    margin-left: 20px;
+    font-size: 20px;
+    position: fixed;
+    margin-top: -30px;
+    right: 20px;
 }
 
 #right{
-    font-size: 18px;
-    text-align: left;
-    margin-right: 20px;
+    font-size: 20px;
+    position: fixed;
+    margin-top: -30px;
+    left: 20px;
 }
 
 header {
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
+    padding-top: 20px;
 }
 
-li {
-    list-style: none;
-    margin-bottom: 4px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 10;
-}
-
-ul, ol {
-    margin-top: 20;
-    padding-left: 20;
+h2, h3, h4, h6 {
+    margin: 0;
 }
 
 a, a:hover, a:visited, a:active {
     color: #FF0000;
-}
-
-h1 a {
-    text-decoration: line-through;
+    text-decoration: none;
 }
 
 p {
@@ -68,10 +73,11 @@ img {
     height: auto;
 }
 
+/* macbook pro fullscreen */
 @media screen and (max-width: 1024px) {
     .columns {
-    -moz-column-gap: 50px;
-    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px; /* Firefox */
+    -webkit-column-gap: 50px;/* Chrome, Safari, Opera */
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
@@ -81,63 +87,37 @@ img {
     }
 }
 
+/* ipad - portrait */
 @media screen and (max-width: 768px) {
     .columns {
     -webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
     column-count: 1;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
     }
 }
 
+/* iphone - portrait */
+@media screen and (max-width: 36em) {
+     .columns {
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    line-height: 15px;
+    }
 
-@media screen and (max-width: 320px) {
-    /* These CSS instructions are only used, if the 
-     * ‘media query’ above turns out to be true 
-     * 
-     * Media query’s can use properties like:
-     * width
-     * orientation
-     * resolution
-     * screen / print
-     */
-    /* Smaller Screens */
-    /* Our heading can be smaller */
-     header h1 {
+    header h1 {
         font-size: 16px;
-        font-style: italic;
-    }
+    } 
+    h5 {
+    font-size: 10px;
 }
-
-@media only screen and (min-width: 36em) {
-    article { 
-    /* Larger Screens */
-        width: calc(100% - 200px);
-        float: right;
-        margin-right: 0;
-		font-size: 30px;
-		line-height: 320px;
-		font-color: blue;
-		font-family: times, sans-serif;
-		
-		
-		-moz-transform: scale(-1, 1);
-		-webkit-transform: scale(-1, 1);
-		-o-transform: scale(-1, 1);
-		-ms-transform: scale(-1, 1);
-		transform: scale(-1, 1);
-    }
-    nav {
-        width: 200px;
-        float: center;
-        margin-left: 0;
-    }
-    footer {
-        clear: both;
-    }
-
+     
 }
 
 @media only print {
