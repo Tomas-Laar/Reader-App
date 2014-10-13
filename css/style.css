@@ -1,8 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-size: 16px;
     font-family: sans-serif;
     line-height: 24px;
-    padding: 8px 16px 0px 8px;
 }
 
 /* This is the subttitle text */
@@ -14,8 +18,9 @@ h1 {font-family: 'Noto Serif', serif;
 }
 /* This is the references and footnotes */
 h2 {font-family: sans-serif;
-    font-size: 9px;
+    font-size: 10px;
     font-weight: lighter;
+    line-height: 20px;
 }
 
 /* This is the running text */
@@ -25,6 +30,7 @@ h5 {font-family: 'Noto Serif', serif;
 }
 
 .columns {
+    
     text-align: justify;
     text-justify: inter-word;
     height: 500px;
@@ -34,8 +40,8 @@ h5 {font-family: 'Noto Serif', serif;
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
     margin-top: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
     padding: 20px;
 }
 
@@ -43,14 +49,14 @@ h5 {font-family: 'Noto Serif', serif;
     font-size: 20px;
     position: fixed;
     margin-top: -30px;
-    right: 20px;
+    left: 20px;
 }
 
 #right{
     font-size: 20px;
     position: fixed;
     margin-top: -30px;
-    left: 20px;
+    right: 20px;
 }
 
 header {
@@ -59,7 +65,7 @@ header {
     padding-top: 20px;
 }
 
-h2, h3, h4, h6 {
+h3, h4, h6 {
     margin: 0;
 }
 
@@ -81,13 +87,13 @@ img {
 /* macbook pro fullscreen */
 @media screen and (max-width: 1024px) {
     .columns {
-    -moz-column-gap: 50px; /* Firefox */
-    -webkit-column-gap: 50px;/* Chrome, Safari, Opera */
+    -moz-column-gap: 100px; /* Firefox */
+    -webkit-column-gap: 100px;/* Chrome, Safari, Opera */
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
     padding: 20px;
     }
 }
@@ -98,8 +104,8 @@ img {
     -webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
     column-count: 1;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
     padding: 20px;
     }
 }
@@ -110,8 +116,8 @@ img {
     -webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
     column-count: 1;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
     padding: 20px;
     line-height: 15px;
     }
