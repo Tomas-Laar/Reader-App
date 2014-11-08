@@ -14,26 +14,31 @@ var snap = function() {
     } else {
        $(window).scrollLeft( n *  gridWidth() ) 
     }
+    var colHeight = $(window).height()-((40+20+20)+$("#header").height());
+    $( "h6" ).css( "line-height" , colHeight+"px" );
 };
 
 $( window ).ready(function(){
-    console.log($(".columns").width());
-    $(".columns").css("height",$(window).height()-((40+20+20)+$("#header").height()));
+    //console.log($(".columns").width());
+    var colHeight = $(window).height()-((40+20+20)+$("#header").height());
+    $( ".columns" ).css( "height" , colHeight );
+    $( "h6" ).css( "line-height" , colHeight+"px" );
 });
 
 $( window ).resize(function(){
-    console.log( $(".columns").width() );
-    $(".columns").css("height",$(window).height()-((40+20+20)+$("#header").height()));
+    //console.log( $(".columns").width() );
+        var colHeight = $(window).height()-((40+20+20)+$("#header").height());
+    $( ".columns" ).css( "height" , colHeight );
+    $( "h6" ).css( "line-height" , colHeight+"px" );
     snap();
 });
 
-$(window)
-  .on("scrollstop", function() {
+$( window ).on( "scrollstop" , function() {
     snap();
     // console.log('Scrollstop' + $(window).scrollLeft() % gridWidth());
-  })
+});
 
-$('#right').click(function(e) {
+$( "#right" ).click(function(e) {
 	e.preventDefault();
     scrollamount = $(window).scrollLeft() + gridWidth();
     //console.log(scrollamount);
@@ -41,7 +46,7 @@ $('#right').click(function(e) {
     $(window).scrollLeft(parseInt(scrollamount));
 });
 
-$('#left').click(function(e) {
+$( "#left" ).click(function(e) {
 	e.preventDefault();
     scrollamount = $(window).scrollLeft() - gridWidth();
     //console.log(scrollamount);

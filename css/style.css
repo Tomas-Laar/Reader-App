@@ -6,8 +6,16 @@
 .navbar {
     background-color: #ffff00;
     height: 30px;
-    width: auto;
+    width: 100%;
     padding-left:70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+@media only print  {
+    .navbar, #left, #right{
+        display: none;
+    }
 }
 
 body {
@@ -36,34 +44,39 @@ h5 {font-family: 'Noto Serif', serif;
     font-weight: 400;
 }
 
+h6 {
+}
+
+h4 {
+    text-align: center;
+    font-size: 8px;
+}
+
 .columns { 
     text-align: justify;
     text-justify: inter-word;
     height: 500px;
-    -moz-column-gap: 100px;
     -webkit-column-gap: 100px;
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-gap: 100px;
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
-    padding: 20px;
+    padding-bottom: 20px;
 }
 
-#left{
+#left, #right{
     font-size: 20px;
     position: fixed;
     left: 15px;
-    top:45%;
+    top:50%;
 }
 
 #right{
-    font-size: 20px;
-    position: fixed;
+    left: inherit;
     right: 15px;
-    top:45%;
-
 }
 
 header {
@@ -83,33 +96,38 @@ p {
 
 /* This makes the images scale to the full width of the page */
 img {
-    width: 100%;
-    height: auto;
+    max-height: 85%;
+    max-width: auto;
 }
 
 /* macbook pro fullscreen */
 @media screen and (max-width: 1024px) {
     .columns {
-    -moz-column-gap: 100px; /* Firefox */
-    -webkit-column-gap: 100px;/* Chrome, Safari, Opera */
+    -webkit-column-gap: 100px;
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-gap: 100px;
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
+    margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
-    padding: 20px;
+    padding-bottom: 20px;
     }
 }
 
 /* ipad - portrait */
 @media screen and (max-width: 768px) {
     .columns {
+    -webkit-column-gap: 100px;
     -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -webkit-column-width: 100px;
+    -moz-column-gap: 100px;
     -moz-column-count: 1; /* Firefox */
-    column-count: 1;
+    -moz-colimn-width: 100px;
+    margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
-    padding: 20px;
+    padding-bottom: 20px;
     }
     header {
         margin-left: 50px;
@@ -120,8 +138,12 @@ img {
 /* iphone - portrait */
 @media screen and (max-width: 36em) {
      .columns {
+    -webkit-column-gap: 100px;
     -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -webkit-column-width: 100px;
+    -moz-column-gap: 100px;
     -moz-column-count: 1; /* Firefox */
+    -moz-colimn-width: 100px;
     column-count: 1;
     margin-left: 20px;
     margin-right: 20px;
